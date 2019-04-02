@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="Alive">
 <meta property="og:description" content="Jenkins是一个非常好用的工具，我们可以用它来帮我们做很多事，如：自动构建、发布测试、持续集成、邮件通知等等很多很多，真是开发者的一个得力帮手。很多同学还不会使用，本文将从零开始，带你半小时上手，轻松搞定繁琐的配置。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-02T14:12:02.462Z">
+<meta property="og:updated_time" content="2019-04-02T14:23:00.279Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用Jenkins持续集成">
 <meta name="twitter:description" content="Jenkins是一个非常好用的工具，我们可以用它来帮我们做很多事，如：自动构建、发布测试、持续集成、邮件通知等等很多很多，真是开发者的一个得力帮手。很多同学还不会使用，本文将从零开始，带你半小时上手，轻松搞定繁琐的配置。">
@@ -427,7 +427,7 @@
                 
               
 
-              <time title="创建时间：2019-04-02 22:04:13 / 修改时间：22:12:02" itemprop="dateCreated datePublished" datetime="2019-04-02T22:04:13+08:00">2019-04-02</time>
+              <time title="创建时间：2019-04-02 22:04:13 / 修改时间：22:23:00" itemprop="dateCreated datePublished" datetime="2019-04-02T22:04:13+08:00">2019-04-02</time>
             
 
             
@@ -515,11 +515,11 @@
 <h6 id="4-构建后操作"><a href="#4-构建后操作" class="headerlink" title="4.构建后操作"></a>4.构建后操作</h6><p>选择Send build artifacts over SSH(要提前去设置好ssh服务器，设置好可以点击测试)</p>
 <p>填写SSH服务器相关配置</p>
 <figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">Name:</span>选择服务器</span><br><span class="line">Source <span class="string">files:</span>要上传的文件，这里我只要上传jar，填`xxx<span class="regexp">/target/</span>*.jar`</span><br><span class="line">Remote <span class="string">directory:</span> 远程文件夹位置，最好先新建好，否则可能报错，如`<span class="regexp">/home/</span>jenkins/demo`</span><br></pre></td></tr></table></figure>
-<p>Exec command:执行命令,注意的是sh脚本要写上jdk环境变量，因为Jenkins的线程马上就会被服务器杀死而无法获取环境变量</p>
+<p><code>Exec command</code>:执行命令,注意的是sh脚本要写上jdk环境变量，因为Jenkins的线程马上就会被服务器杀死而无法获取环境变量</p>
 <figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">cd</span> /home/<span class="keyword">test</span>/</span><br><span class="line"><span class="keyword">sh</span> <span class="keyword">app</span>.<span class="keyword">sh</span> stop</span><br><span class="line"><span class="keyword">rm</span> -rf *.jar logs/</span><br><span class="line">cp -r /home/jenkins/<span class="keyword">test</span><span class="comment">/*.jar ./</span></span><br><span class="line"><span class="comment">sh app.sh start</span></span><br></pre></td></tr></table></figure>
-<p>app.sh顶部写法</p>
+<p><code>app.sh</code>顶部写法，记得<code>chmod +x app.sh</code>赋予执行权限</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"><span class="built_in">export</span> JAVA_HOME=/usr/<span class="built_in">local</span>/java/jdk1.8.0_181</span><br><span class="line"><span class="built_in">export</span> JRE_HOME=<span class="variable">$JAVA_HOME</span>/jre</span><br><span class="line">PATH=<span class="variable">$JAVA_HOME</span>/bin:<span class="variable">$PATH</span></span><br><span class="line"><span class="built_in">export</span> PATH</span><br></pre></td></tr></table></figure>
-<p>点击高级，勾上Flatten files,这样不会创建没用的目录</p>
+<p>点击高级，勾上<code>Flatten files</code>,这样不会创建没用的目录</p>
 <p>到此基本结束，后续会补充git(svn)的tags标签用法，构建失败（或成攻）发送邮件等功能</p>
 
       
