@@ -96,28 +96,18 @@
 
 
 
-  <meta name="description" content="《编写可读代码的艺术》这本书我想程序猿都很熟悉吧。平时不怎么读书的我也是心血来潮将这本书通读了一遍，果然是大师写的书啊，让我感受颇深！下面是我从这本“神书”中摘抄的一些精华，千万不要错过：">
-<meta name="keywords" content="代码">
+  <meta name="description" content="SonarQube 是一个用于管理源代码质量开放平台，它可以从多个维度检测代码质量，可以快速的定位代码中潜在的或者明显的 Bug、错误。它支持包括 Java、Python、Php、C/C++、C#、HTML、JavaScript、PL/SQL、Objective C 等二十多种编程语言的代码质量管理与检测。可作为我们日常开发中检测代码质量的重要工具。。很多同学还不会使用，本文将从零开始，带你半小时">
+<meta name="keywords" content="Sonar">
 <meta property="og:type" content="article">
-<meta property="og:title" content="你真的会写代码吗？">
-<meta property="og:url" content="http://zhangmrit.github.io/2017/02/13/DoYouReallyWriteCode/index.html">
+<meta property="og:title" content="Sonar快速入门">
+<meta property="og:url" content="http://zhangmrit.github.io/2019/04/10/LearnSonarFast/index.html">
 <meta property="og:site_name" content="Alive">
-<meta property="og:description" content="《编写可读代码的艺术》这本书我想程序猿都很熟悉吧。平时不怎么读书的我也是心血来潮将这本书通读了一遍，果然是大师写的书啊，让我感受颇深！下面是我从这本“神书”中摘抄的一些精华，千万不要错过：">
+<meta property="og:description" content="SonarQube 是一个用于管理源代码质量开放平台，它可以从多个维度检测代码质量，可以快速的定位代码中潜在的或者明显的 Bug、错误。它支持包括 Java、Python、Php、C/C++、C#、HTML、JavaScript、PL/SQL、Objective C 等二十多种编程语言的代码质量管理与检测。可作为我们日常开发中检测代码质量的重要工具。。很多同学还不会使用，本文将从零开始，带你半小时">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://p3.pstatp.com/large/1687000195b96d2c8170">
-<meta property="og:image" content="http://p3.pstatp.com/large/16880001ffd06b07432e">
-<meta property="og:image" content="http://p3.pstatp.com/large/168800020146769bbb2b">
-<meta property="og:image" content="http://p3.pstatp.com/large/16870001a2a5a6bd2073">
-<meta property="og:image" content="http://p3.pstatp.com/large/16860000244a8859e586">
-<meta property="og:image" content="http://p3.pstatp.com/large/16870001a116f9278170">
-<meta property="og:image" content="http://p1.pstatp.com/large/16880002090c168361f2">
-<meta property="og:image" content="http://p1.pstatp.com/large/1688000207441866cfd9">
-<meta property="og:image" content="http://p1.pstatp.com/large/168600001eb8742db3a4">
-<meta property="og:updated_time" content="2019-04-02T10:54:51.087Z">
+<meta property="og:updated_time" content="2019-04-10T02:57:25.292Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="你真的会写代码吗？">
-<meta name="twitter:description" content="《编写可读代码的艺术》这本书我想程序猿都很熟悉吧。平时不怎么读书的我也是心血来潮将这本书通读了一遍，果然是大师写的书啊，让我感受颇深！下面是我从这本“神书”中摘抄的一些精华，千万不要错过：">
-<meta name="twitter:image" content="http://p3.pstatp.com/large/1687000195b96d2c8170">
+<meta name="twitter:title" content="Sonar快速入门">
+<meta name="twitter:description" content="SonarQube 是一个用于管理源代码质量开放平台，它可以从多个维度检测代码质量，可以快速的定位代码中潜在的或者明显的 Bug、错误。它支持包括 Java、Python、Php、C/C++、C#、HTML、JavaScript、PL/SQL、Objective C 等二十多种编程语言的代码质量管理与检测。可作为我们日常开发中检测代码质量的重要工具。。很多同学还不会使用，本文将从零开始，带你半小时">
 
 
 
@@ -125,7 +115,7 @@
 
   
   
-  <link rel="canonical" href="http://zhangmrit.github.io/2017/02/13/DoYouReallyWriteCode/">
+  <link rel="canonical" href="http://zhangmrit.github.io/2019/04/10/LearnSonarFast/">
 
 
 
@@ -135,7 +125,7 @@
   };
 </script>
 
-  <title>你真的会写代码吗？ | Alive</title>
+  <title>Sonar快速入门 | Alive</title>
   
 
 
@@ -394,7 +384,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://zhangmrit.github.io/2017/02/13/DoYouReallyWriteCode/">
+    <link itemprop="mainEntityOfPage" href="http://zhangmrit.github.io/2019/04/10/LearnSonarFast/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Murphy">
@@ -411,7 +401,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">你真的会写代码吗？
+          <h1 class="post-title" itemprop="name headline">Sonar快速入门
 
               
             
@@ -437,24 +427,12 @@
                 
               
 
-              <time title="创建时间：2017-02-13 13:06:45" itemprop="dateCreated datePublished" datetime="2017-02-13T13:06:45+08:00">2017-02-13</time>
+              <time title="创建时间：2019-04-10 11:04:13 / 修改时间：10:57:25" itemprop="dateCreated datePublished" datetime="2019-04-10T11:04:13+08:00">2019-04-10</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-04-02 18:54:51" itemprop="dateModified" datetime="2019-04-02T18:54:51+08:00">2019-04-02</time>
               
             
           </span>
@@ -471,7 +449,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/涂鸦/" itemprop="url" rel="index"><span itemprop="name">涂鸦</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/工具/" itemprop="url" rel="index"><span itemprop="name">工具</span></a></span>
 
                 
                 
@@ -490,8 +468,8 @@
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/2017/02/13/DoYouReallyWriteCode/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2017/02/13/DoYouReallyWriteCode/" itemprop="commentCount"></span>
+                <a href="/2019/04/10/LearnSonarFast/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/04/10/LearnSonarFast/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -499,7 +477,7 @@
 
           
           
-            <span id="/2017/02/13/DoYouReallyWriteCode/" class="leancloud_visitors" data-flag-title="你真的会写代码吗？">
+            <span id="/2019/04/10/LearnSonarFast/" class="leancloud_visitors" data-flag-title="Sonar快速入门">
               <span class="post-meta-divider">|</span>
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
@@ -530,70 +508,20 @@
       
 
       
-        <p>《编写可读代码的艺术》这本书我想程序猿都很熟悉吧。平时不怎么读书的我也是心血来潮将这本书通读了一遍，果然是大师写的书啊，让我感受颇深！<br>下面是我从这本“神书”中摘抄的一些精华，千万不要错过：<br><a id="more"></a></p>
-<h2 id="把信息塞进名字中"><a href="#把信息塞进名字中" class="headerlink" title="把信息塞进名字中"></a>把信息塞进名字中</h2><p><img src="http://p3.pstatp.com/large/1687000195b96d2c8170" alt="有比食人花更好的名字吗？|center"></p>
-<ol>
-<li>避免空泛的名字，像tmp和retval，除非使用它们有特殊的理由。</li>
-<li>使用具体的名字来更细致地描述事物——ServerCanStart()这个名字就比CanListenOnPort更不清楚。</li>
-<li>给变量名带上重要的细节——例如，在值为毫秒的变量后面加上_ms。</li>
-<li>为作用域大的名字采用更长的名字——不要用让人费解的一个或两个字母的名字来命名在几屏之间都可见的变量。对于只存 在于几行之间的变量用短一点的名字更好。</li>
-<li>有目的的使用大小写、下划线等——例如，你可以在类成员和局部变量后面加上”_”来区分它们。</li>
-</ol>
-<h2 id="不会误解的名字是最好的名字"><a href="#不会误解的名字是最好的名字" class="headerlink" title="不会误解的名字是最好的名字"></a>不会误解的名字是最好的名字</h2><p><img src="http://p3.pstatp.com/large/16880001ffd06b07432e" alt="那么问题来了，是右边的线吗？|center"></p>
-<ol>
-<li>当要定义一个值的上限或下限时，max_和min_是很好的前缀。对于包含的范围，first和last是最好的选择。对于包含/排除范围，begin和end是最好的选择，因为它们最常用。</li>
-<li>当为布尔值命名时，使用is和has这样的词来明确表示它是个布尔值，避免使用反义的词(例如disable_ssl)。</li>
-<li>要小心用户对特定词的期望。例如，用户会期望get()或者size()是轻量的方法。</li>
-</ol>
-<h2 id="大家都愿意读有美感的代码"><a href="#大家都愿意读有美感的代码" class="headerlink" title="大家都愿意读有美感的代码"></a>大家都愿意读有美感的代码</h2><p><img src="http://p3.pstatp.com/large/168800020146769bbb2b" alt="要疯了简直|center"></p>
-<ol>
-<li>如果多个代码块做相似的事情，尝试让它们有同样的剪影。</li>
-<li>把代码按”列”对齐可以让代码更容易浏览。</li>
-<li>如果在一段代码中提到A、B和C，那么不要在另一段中说B、C和A。选择一个有意义的顺序并始终用这样的顺序。</li>
-<li>用空行来把大块代码分成逻辑上的“段落”。</li>
-</ol>
-<h2 id="什么地方不需要注释"><a href="#什么地方不需要注释" class="headerlink" title="什么地方不需要注释"></a>什么地方不需要注释</h2><p><img src="http://p3.pstatp.com/large/16870001a2a5a6bd2073" alt="有没有此地无银三百两的感觉|center"></p>
-<ol>
-<li>能从代码本身中迅速地推断的事实。</li>
-<li>用来粉饰烂代码（例如蹩脚的函数名）的“拐杖式注释”——应该把代码改好。</li>
-</ol>
-<h2 id="你应该记录下来的想法"><a href="#你应该记录下来的想法" class="headerlink" title="你应该记录下来的想法"></a>你应该记录下来的想法</h2><p><img src="http://p3.pstatp.com/large/16860000244a8859e586" alt="我可以笑吗？|center"></p>
-<ol>
-<li>对于为什么代码写成这样而不是那样的内在理由（“指导性批注”）。</li>
-<li>代码中的缺陷，使用像TODO：或者XXX：这样的标记。</li>
-<li>常量背后的故事，为什么是这个值。</li>
-</ol>
-<h2 id="站在读者的立场上思考"><a href="#站在读者的立场上思考" class="headerlink" title="站在读者的立场上思考"></a>站在读者的立场上思考</h2><p><img src="http://p3.pstatp.com/large/16870001a116f9278170" alt="给了等于没给|center"></p>
-<ol>
-<li>预料到代码中哪些部分会让读者说：“啊？”并且给它们加上注释。</li>
-<li>为普通读者意料之外的行为加上注释。</li>
-<li>在文件/类的级别上使用“全局观”注释来解释所有的部分是如何一起工作的。</li>
-<li>用注释来总结代码块，使读者不致迷失在细节中。</li>
-</ol>
-<h2 id="把更多的信息装入更小的空间里"><a href="#把更多的信息装入更小的空间里" class="headerlink" title="把更多的信息装入更小的空间里"></a>把更多的信息装入更小的空间里</h2><p><img src="http://p1.pstatp.com/large/16880002090c168361f2" alt="言简意赅的注释也很重要！|center"></p>
-<ol>
-<li>当像“it”和“this”这样的代词可能指代多个事物时，避免使用它们。</li>
-<li>尽量精确的描述函数的行为。</li>
-<li>在注释中用精心挑选的输入/输出例子进行说明。</li>
-<li>声明代码的高层次意图，而非明显的细节。</li>
-<li>用嵌入的注释（如Function(/<em>arg =</em>/…)）来解释难以理解的函数参数。</li>
-<li>用含义丰富的词来使注释简洁。</li>
-</ol>
-<h2 id="让代码的控制流更易读"><a href="#让代码的控制流更易读" class="headerlink" title="让代码的控制流更易读"></a>让代码的控制流更易读</h2><p><img src="http://p1.pstatp.com/large/1688000207441866cfd9" alt="那句话怎么说来着？|center"></p>
-<ol>
-<li>在写一个比较时，把改变的值写在左边，并且把更稳定的值写在右边更好一些。</li>
-<li>你也可以重新排列if/else语句中的语句块。通常来讲，先处理正确的/简单的/有趣的情况。有时这些准则会冲突，但是当不冲突时，这是要遵循的经验法则。</li>
-<li>三目运算符必须在结构非常简单的情况下使用。</li>
-<li>嵌套的代码块需要更加集中精力去理解。应该把它们改写成更加“线性”的代码来避免深嵌套。</li>
-<li>通常来讲提早返回可以减少嵌套并让代码整洁。“保护语句”（在函数顶部处理简单的情况时）尤其有用。</li>
-</ol>
-<h2 id="减少变量的数量和让它们尽量“轻量级”来让代码更有可读性"><a href="#减少变量的数量和让它们尽量“轻量级”来让代码更有可读性" class="headerlink" title="减少变量的数量和让它们尽量“轻量级”来让代码更有可读性"></a>减少变量的数量和让它们尽量“轻量级”来让代码更有可读性</h2><p><img src="http://p1.pstatp.com/large/168600001eb8742db3a4" alt="这个配图很有意思哦|center"></p>
-<ol>
-<li>减少变量，即那些妨碍的变量。</li>
-<li>减小每个变量的作用域，越小越好。</li>
-<li>只写一次的变量更好。那些只设置一次值的变量（或者const、final、常量）使得代码更容易理解。</li>
-</ol>
-<p><strong><em>最后送大家一句我最近喜欢的话：当才华还撑不起野心时，那你就应该静下心来学习！</em></strong></p>
+        <p>SonarQube 是一个用于管理源代码质量开放平台，它可以从多个维度检测代码质量，可以快速的定位代码中潜在的或者明显的 Bug、错误。它支持包括 Java、Python、Php、C/C++、C#、HTML、JavaScript、PL/SQL、Objective C 等二十多种编程语言的代码质量管理与检测。可作为我们日常开发中检测代码质量的重要工具。。很多同学还不会使用，本文将从零开始，带你半小时上手，轻松搞定繁琐的配置。<br><a id="more"></a></p>
+<h2 id="sonarqube"><a href="#sonarqube" class="headerlink" title="sonarqube"></a>sonarqube</h2><h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p><a href="https://www.sonarqube.org/" target="_blank" rel="noopener">官网下载</a></p>
+<h3 id="sonarqube配置"><a href="#sonarqube配置" class="headerlink" title="sonarqube配置"></a>sonarqube配置</h3><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">sonar.jdbc.url</span>=jdbc:mysql://localhost:<span class="number">3306</span>/sonar?useUnicode=<span class="literal">true</span>&amp;characterEncoding=utf8&amp;rewriteBatchedStatements=<span class="literal">true</span>&amp;useConfigs=maxPerformance&amp;useSSL=<span class="literal">false</span></span><br><span class="line"><span class="attr">sonar.jdbc.username</span>=root</span><br><span class="line"><span class="attr">sonar.jdbc.password</span>=root</span><br><span class="line"><span class="attr">sonar.sorceEncoding</span>=UTF-<span class="number">8</span></span><br><span class="line"><span class="attr">sonar.login</span>=admin</span><br><span class="line"><span class="attr">sonar.password</span>=admin</span><br></pre></td></tr></table></figure>
+<h3 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h3><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">chinese pack</span></span><br><span class="line"><span class="attribute">checkstyle</span></span><br><span class="line"><span class="attribute">pdm</span></span><br><span class="line"><span class="attribute">findbugs</span></span><br></pre></td></tr></table></figure>
+<h2 id="sonar-scanner"><a href="#sonar-scanner" class="headerlink" title="sonar-scanner"></a>sonar-scanner</h2><h3 id="下载-1"><a href="#下载-1" class="headerlink" title="下载"></a>下载</h3><p><a href="https://docs.sonarqube.org/display/SCAN/Analyzing+with+SonarQube+Scanner" target="_blank" rel="noopener">官网下载</a></p>
+<h3 id="设置环境变量"><a href="#设置环境变量" class="headerlink" title="设置环境变量"></a>设置环境变量</h3><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">SONAR_SCANNER</span>=F:\sonar-scanner</span><br><span class="line"><span class="attr">Path</span>=%SONAR_SCANNER%\bin</span><br></pre></td></tr></table></figure>
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>打开<code>conf/sonar-scanner.properties</code></p>
+<p>一般默认值就行,如果不在同一个机器配置<code>sonar.host.url</code>，即<code>sonarqube</code>的访问地址</p>
+<h3 id="sonnar-scanner代码检查"><a href="#sonnar-scanner代码检查" class="headerlink" title="sonnar-scanner代码检查"></a>sonnar-scanner代码检查</h3><h5 id="1-maven配置（推荐）"><a href="#1-maven配置（推荐）" class="headerlink" title="1. maven配置（推荐）"></a>1. maven配置（推荐）</h5><p>只需要在全局maven配置中加入以下参数</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">settings</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">pluginGroups</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">pluginGroup</span>&gt;</span>org.sonarsource.scanner.maven<span class="tag">&lt;/<span class="name">pluginGroup</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">pluginGroups</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">profiles</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">profile</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">id</span>&gt;</span>sonar<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">activation</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">activeByDefault</span>&gt;</span>true<span class="tag">&lt;/<span class="name">activeByDefault</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">activation</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">properties</span>&gt;</span></span><br><span class="line">                <span class="comment">&lt;!-- Optional URL to server. Default value is http://localhost:9000 --&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">sonar.host.url</span>&gt;</span></span><br><span class="line">                  http://myserver:9000</span><br><span class="line">                <span class="tag">&lt;/<span class="name">sonar.host.url</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">profile</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;/<span class="name">profiles</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">settings</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>执行命令</p>
+<figure class="highlight oxygene"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">mvn clean verify sonar:sonar</span><br><span class="line">  </span><br><span class="line"># <span class="keyword">In</span> some situation you may want <span class="keyword">to</span> run sonar:sonar goal <span class="keyword">as</span> a dedicated <span class="keyword">step</span>. Be sure <span class="keyword">to</span> use install <span class="keyword">as</span> first <span class="keyword">step</span> <span class="keyword">for</span> multi-<span class="keyword">module</span> projects</span><br><span class="line">mvn clean install</span><br><span class="line">mvn sonar:sonar</span><br><span class="line"> </span><br><span class="line"># Specify the version <span class="keyword">of</span> sonar-maven-plugin instead <span class="keyword">of</span> <span class="keyword">using</span> the latest. See also <span class="string">'How to Fix Version of Maven Plugin'</span> below.</span><br><span class="line">mvn org.sonarsource.scanner.maven:sonar-maven-plugin:<span class="number">3.6</span>.<span class="number">0.1398</span>:sonar</span><br></pre></td></tr></table></figure>
+<h5 id="2-项目中配置"><a href="#2-项目中配置" class="headerlink" title="2. 项目中配置"></a>2. 项目中配置</h5><p>这个比较复杂，建议多看<a href="https://docs.sonarqube.org/display/SCAN/Analyzing+with+SonarQube+Scanner" target="_blank" rel="noopener">文档</a><br>下面是<code>ruoyi</code>多模块设置示例</p>
+<p>ruoyi项目根目录新建文件<code>sonar-project.properties</code><br><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># must be unique in a given SonarQube instance</span></span><br><span class="line"><span class="attr">sonar.projectKey</span>=ruoyi</span><br><span class="line"><span class="comment"># this is the name and version displayed in the SonarQube UI. Was mandatory prior to SonarQube 6.1.</span></span><br><span class="line"><span class="attr">sonar.projectName</span>=ruoyi</span><br><span class="line"><span class="attr">sonar.projectVersion</span>=<span class="number">1.0</span></span><br><span class="line"> </span><br><span class="line"><span class="comment"># Path is relative to the sonar-project.properties file. Replace "\" by "/" on Windows.</span></span><br><span class="line"><span class="comment"># This property is optional if sonar.modules is set. </span></span><br><span class="line"><span class="comment">#sonar.sources=.</span></span><br><span class="line"><span class="comment">#sonar.sources=src</span></span><br><span class="line"><span class="attr">sonar.sources</span>=src/main/java</span><br><span class="line"><span class="attr">sonar.java.binaries</span>=target/</span><br><span class="line"><span class="attr">sonar.language</span>=java</span><br><span class="line"><span class="attr">sonar.modules</span>=ruoyi-admin,ruoyi-common,ruoyi-framework,ruoyi-system,ruoyi-app,ruoyi-generator,ruoyi-quartz</span><br><span class="line"><span class="comment"># Encoding of the source code. Default is default system encoding</span></span><br><span class="line"><span class="comment">#sonar.sourceEncoding=UTF-8</span></span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -617,7 +545,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/代码/" rel="tag"># 代码</a>
+            <a href="/tags/Sonar/" rel="tag"># Sonar</a>
           
         </div>
       
@@ -630,8 +558,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/10/11/2016NewAlipayPaymentBug/" rel="next" title="2016新版支付宝APP支付的坑">
-                <i class="fa fa-chevron-left"></i> 2016新版支付宝APP支付的坑
+              <a href="/2019/04/02/JenkinsContinuous/" rel="next" title="使用Jenkins持续集成">
+                <i class="fa fa-chevron-left"></i> 使用Jenkins持续集成
               </a>
             
           </div>
@@ -639,10 +567,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/05/09/ReadSiteConfigurationFromDatabase/" rel="prev" title="从数据库读取网站配置">
-                从数据库读取网站配置 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -848,7 +772,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#把信息塞进名字中"><span class="nav-number">1.</span> <span class="nav-text">把信息塞进名字中</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#不会误解的名字是最好的名字"><span class="nav-number">2.</span> <span class="nav-text">不会误解的名字是最好的名字</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#大家都愿意读有美感的代码"><span class="nav-number">3.</span> <span class="nav-text">大家都愿意读有美感的代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#什么地方不需要注释"><span class="nav-number">4.</span> <span class="nav-text">什么地方不需要注释</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#你应该记录下来的想法"><span class="nav-number">5.</span> <span class="nav-text">你应该记录下来的想法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#站在读者的立场上思考"><span class="nav-number">6.</span> <span class="nav-text">站在读者的立场上思考</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#把更多的信息装入更小的空间里"><span class="nav-number">7.</span> <span class="nav-text">把更多的信息装入更小的空间里</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#让代码的控制流更易读"><span class="nav-number">8.</span> <span class="nav-text">让代码的控制流更易读</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#减少变量的数量和让它们尽量“轻量级”来让代码更有可读性"><span class="nav-number">9.</span> <span class="nav-text">减少变量的数量和让它们尽量“轻量级”来让代码更有可读性</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#sonarqube"><span class="nav-number">1.</span> <span class="nav-text">sonarqube</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#下载"><span class="nav-number">1.1.</span> <span class="nav-text">下载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sonarqube配置"><span class="nav-number">1.2.</span> <span class="nav-text">sonarqube配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装插件"><span class="nav-number">1.3.</span> <span class="nav-text">安装插件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sonar-scanner"><span class="nav-number">2.</span> <span class="nav-text">sonar-scanner</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#下载-1"><span class="nav-number">2.1.</span> <span class="nav-text">下载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置环境变量"><span class="nav-number">2.2.</span> <span class="nav-text">设置环境变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置"><span class="nav-number">2.3.</span> <span class="nav-text">配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sonnar-scanner代码检查"><span class="nav-number">2.4.</span> <span class="nav-text">sonnar-scanner代码检查</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-maven配置（推荐）"><span class="nav-number">2.4.0.1.</span> <span class="nav-text">1. maven配置（推荐）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-项目中配置"><span class="nav-number">2.4.0.2.</span> <span class="nav-text">2. 项目中配置</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
