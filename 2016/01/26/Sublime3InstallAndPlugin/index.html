@@ -111,6 +111,8 @@
 
 
 
+  <link rel="alternate" href="/atom.xml" title="Alive" type="application/atom+xml">
+
 
 
   
@@ -537,34 +539,63 @@
       
 
       
-        <p>SublimeText是一款非常精巧的文本编辑器，适合编写代码、做笔记、写文章。它用户界面十分整洁，功能非同凡响，性能快得出奇。这些非常棒的特性 包括任意跳转（Goto Anything）、多重选择（multiple selections）、指令面板（command palette）、免打扰模式（distraction free mode）、分区编辑（split editing）、快速项目切换（instant project switch），你还可以随意地自定义更多功能。还有，这款编辑器支持Mac、Windows和Linux平台。<br><a id="more"></a></p>
-<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>1.官网下载最新版，可以选择text2或者text3，我选择的text3，它出来也很久啦，很多方面已经得到了完善。<br>2.度娘一下激活码，大多都是可以用的，当然不用激活码也没事，它是无限试用的。<br>3.有需要可以汉化，其实也没必要，就是一些菜单而已。也不难，网上随意搜下汉化包放到指定位置即可。</p>
-<h3 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h3><p>SublimeText本身已经非常强大，但是更棒的是有一长串的插件支持它，给它带来更强大的功能。本文将介绍一些 Sublime Text 3 支持的热门插件（Sublime Text 2 的一些插件在 Sublime Text 3 上不支持）。</p>
-<h4 id="Package-Control"><a href="#Package-Control" class="headerlink" title="Package Control"></a>Package Control</h4><p>Package Control 插件是一个方便 Sublime text 管理插件的插件，但因为 Sublime Text 3 更新了 Python 的函数，API不同了，导致基于 Python 开发的插件很多都不能工作，Package Control 原来的安装方法都失效了。</p>
+        <p>SublimeText是一款非常精巧的文本编辑器，适合编写代码、做笔记、写文章。它用户界面十分整洁，功能非同凡响，性能快得出奇。这些非常棒的特性 包括任意跳转（Goto Anything）、多重选择（multiple selections）、指令面板（command palette）、免打扰模式（distraction free mode）、分区编辑（split editing）、快速项目切换（instant project switch），你还可以随意地自定义更多功能。还有，这款编辑器支持Mac、Windows和Linux平台。</p>
+<a id="more"></a>
+<h3 id="安装"><a class="header-anchor" href="#安装">¶</a>安装</h3>
+<p>1.官网下载最新版，可以选择text2或者text3，我选择的text3，它出来也很久啦，很多方面已经得到了完善。<br>
+2.度娘一下激活码，大多都是可以用的，当然不用激活码也没事，它是无限试用的。<br>
+3.有需要可以汉化，其实也没必要，就是一些菜单而已。也不难，网上随意搜下汉化包放到指定位置即可。</p>
+<h3 id="插件"><a class="header-anchor" href="#插件">¶</a>插件</h3>
+<p>SublimeText本身已经非常强大，但是更棒的是有一长串的插件支持它，给它带来更强大的功能。本文将介绍一些 Sublime Text 3 支持的热门插件（Sublime Text 2 的一些插件在 Sublime Text 3 上不支持）。</p>
+<h4 id="package-control"><a class="header-anchor" href="#package-control">¶</a>Package Control</h4>
+<p>Package Control 插件是一个方便 Sublime text 管理插件的插件，但因为 Sublime Text 3 更新了 Python 的函数，API不同了，导致基于 Python 开发的插件很多都不能工作，Package Control 原来的安装方法都失效了。</p>
 <p>网上有2种使用 Git 的安装方法，感觉太麻烦了。此处将 wbond 网站的 ST3 Package Control 简便安装方法翻译转至此处，方便大家查阅。</p>
-<h5 id="简单的安装方法："><a href="#简单的安装方法：" class="headerlink" title="简单的安装方法："></a>简单的安装方法：</h5><p>从菜单 View - Show Console 或者 ctrl + ~ 快捷键，调出 console。将以下 Python 代码粘贴进去并 enter 执行，不出意外即完成安装。以下提供 ST3 和 ST2 的安装代码：<br>Sublime Text 3：</p>
-<pre><code>import urllib.request,os; pf = &apos;Package Control.sublime-package&apos;; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), &apos;wb&apos;).write(urllib.request.urlopen( &apos;http://sublime.wbond.net/&apos; + pf.replace(&apos; &apos;,&apos;%20&apos;)).read())`
-</code></pre><p>Sublime Text 2：</p>
-<pre><code>import urllib2,os; pf=&apos;Package Control.sublime-package&apos;; ipp = sublime.installed_packages_path(); os.makedirs( ipp ) if not os.path.exists(ipp) else None; urllib2.install_opener( urllib2.build_opener( urllib2.ProxyHandler( ))); open( os.path.join( ipp, pf), &apos;wb&apos; ).write( urllib2.urlopen( &apos;http://sublime.wbond.net/&apos; +pf.replace( &apos; &apos;,&apos;%20&apos; )).read()); print( &apos;Please restart Sublime Text to finish installation&apos;)
-</code></pre><h4 id="Emmet"><a href="#Emmet" class="headerlink" title="Emmet"></a>Emmet</h4><p>Emmet 是一个前端开发的利器，其前身是 Zen Coding。它让编写 HTML 代码变得简单。Emmet 的基本用法是：输入简写形式，然后按 Tab 键。<br>安装请使用上面的插件哦！</p>
+<h5 id="简单的安装方法："><a class="header-anchor" href="#简单的安装方法：">¶</a>简单的安装方法：</h5>
+<p>从菜单 View - Show Console 或者 ctrl + ~ 快捷键，调出 console。将以下 Python 代码粘贴进去并 enter 执行，不出意外即完成安装。以下提供 ST3 和 ST2 的安装代码：<br>
+Sublime Text 3：</p>
+<pre><code>import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())`
+</code></pre>
+<p>Sublime Text 2：</p>
+<pre><code>import urllib2,os; pf='Package Control.sublime-package'; ipp = sublime.installed_packages_path(); os.makedirs( ipp ) if not os.path.exists(ipp) else None; urllib2.install_opener( urllib2.build_opener( urllib2.ProxyHandler( ))); open( os.path.join( ipp, pf), 'wb' ).write( urllib2.urlopen( 'http://sublime.wbond.net/' +pf.replace( ' ','%20' )).read()); print( 'Please restart Sublime Text to finish installation')
+</code></pre>
+<h4 id="emmet"><a class="header-anchor" href="#emmet">¶</a>Emmet</h4>
+<p>Emmet 是一个前端开发的利器，其前身是 Zen Coding。它让编写 HTML 代码变得简单。Emmet 的基本用法是：输入简写形式，然后按 Tab 键。<br>
+安装请使用上面的插件哦！</p>
 <p>关于 Emmet 的更多用法，请看<a href="http://docs.emmet.io/" target="_blank" rel="noopener">官方文档</a>，这份<a href="http://docs.emmet.io/cheat-sheet/" target="_blank" rel="noopener">速查表</a>可以帮你快速记忆简写形式。</p>
-<h4 id="Soda-Theme"><a href="#Soda-Theme" class="headerlink" title="Soda Theme"></a>Soda Theme</h4><p>Soda Theme 是最受欢迎的 Sublime Text 主题。<br>现在Soda集成了Light和Dark，以前是要分开下的呢。话不多说，上使用方法：<br>在你的配置文件（菜单 Preferences -&gt; Settings - User）中加入”theme”: “Soda Light.sublime-theme” 或 “theme”: “Soda Dark.sublime-theme”</p>
-<h4 id="SublimeLinter"><a href="#SublimeLinter" class="headerlink" title="SublimeLinter"></a>SublimeLinter</h4><p>SublimeLinter 是一个代码校验插件，它可以帮你找出错误或编写不规范的代码，支持 C/C++、CoffeeScript、CSS、Git Commit Messages、Haml、HTML、Java、JavaScript、Lua、Objective-J、Perl、PHP、Puppet、Python、Ruby 和 XML 语言。</p>
+<h4 id="soda-theme"><a class="header-anchor" href="#soda-theme">¶</a>Soda Theme</h4>
+<p>Soda Theme 是最受欢迎的 Sublime Text 主题。<br>
+现在Soda集成了Light和Dark，以前是要分开下的呢。话不多说，上使用方法：<br>
+在你的配置文件（菜单 Preferences -&gt; Settings - User）中加入&quot;theme&quot;: “Soda Light.sublime-theme” 或 “theme”: “Soda Dark.sublime-theme”</p>
+<h4 id="sublimelinter"><a class="header-anchor" href="#sublimelinter">¶</a>SublimeLinter</h4>
+<p>SublimeLinter 是一个代码校验插件，它可以帮你找出错误或编写不规范的代码，支持 C/C++、CoffeeScript、CSS、Git Commit Messages、Haml、HTML、Java、JavaScript、Lua、Objective-J、Perl、PHP、Puppet、Python、Ruby 和 XML 语言。</p>
 <p>SublimeLinter 默认以 background 模式运行，在用户输入的同时即时校验，如果你想要 Sublime Text 运行得更流畅，可以空白处右键改为 load-save 模式或 save-only 模式，在读取和保存是校验或只在保存时校验。</p>
-<h4 id="Sublime​Code​Intel"><a href="#Sublime​Code​Intel" class="headerlink" title="Sublime​Code​Intel"></a>Sublime​Code​Intel</h4><p>Sublime​Code​Intel 是一个代码提示、补全插件，支持 JavaScript、Mason、XBL、XUL、RHTML、SCSS、Python、HTML、Ruby、Python3、XML、Sass、XSLT、Django、HTML5、Perl、CSS、Twig、Less、Smarty、Node.js、Tcl、TemplateToolkit 和 PHP 等语言，是 Sublime Text 自带代码提示功能的很好扩展。它还有一个功能就是跳转到变量、函数定义的地方，十分方便。</p>
-<h4 id="Alignment"><a href="#Alignment" class="headerlink" title="Alignment"></a>Alignment</h4><p>Alignment 是一个代码格式化插件，它可以使多行代码中的等号对齐，也可以调整多行代码为一个缩进级别，默认快捷键是 ctrl+alt+a（Mac OS 上是 cmd+ctrl+a）。跟QQ截图冲突了？自己改下吧，我改成了ctrl+shift+a。</p>
-<h4 id="ColorPicker"><a href="#ColorPicker" class="headerlink" title="ColorPicker"></a>ColorPicker</h4><p>在编辑CSS样式的时候，要加个自己喜欢颜色或改改颜色啥的，要到PS里去调色？ColorPicker 可以让 Sublime Text 3内置一个调色盘，调好颜色，点击OK就会在光标处生成十六进制颜色代码。</p>
-<h4 id="CssComb"><a href="#CssComb" class="headerlink" title="CssComb"></a>CssComb</h4><p>这是用来给CSS属性进行排序的格式化插件。如果你想保持的代码干净整洁，并且希望按一定的顺序排列（是不是有点强迫症了？），那么这个插件是一种有效解决的方案。特别是当你和其他有自己代码编写风格的开发者一同协作的时候。</p>
-<h4 id="ConvertToUTF8"><a href="#ConvertToUTF8" class="headerlink" title="ConvertToUTF8"></a>ConvertToUTF8</h4><p>Sublime原生不支持GBK等编码，打开这类编码文件时中文或一些字符都乱码了，安装该插件即可解决</p>
-<h4 id="HTML5-amp-HTMLattributes"><a href="#HTML5-amp-HTMLattributes" class="headerlink" title="HTML5&amp;HTMLattributes"></a>HTML5&amp;HTMLattributes</h4><p>这两个插件对弥补了sublime对html5支持度不足的缺陷</p>
-<h4 id="Jquery"><a href="#Jquery" class="headerlink" title="Jquery"></a>Jquery</h4><p>顾名思义，包含jquery函数</p>
-<h4 id="CodeFormatter"><a href="#CodeFormatter" class="headerlink" title="CodeFormatter"></a>CodeFormatter</h4><p>可以对html、JS、CSS、PHP、python代码格式化的插件</p>
+<h4 id="sublime-code-intel"><a class="header-anchor" href="#sublime-code-intel">¶</a>Sublime​Code​Intel</h4>
+<p>Sublime​Code​Intel 是一个代码提示、补全插件，支持 JavaScript、Mason、XBL、XUL、RHTML、SCSS、Python、HTML、Ruby、Python3、XML、Sass、XSLT、Django、HTML5、Perl、CSS、Twig、Less、Smarty、Node.js、Tcl、TemplateToolkit 和 PHP 等语言，是 Sublime Text 自带代码提示功能的很好扩展。它还有一个功能就是跳转到变量、函数定义的地方，十分方便。</p>
+<h4 id="alignment"><a class="header-anchor" href="#alignment">¶</a>Alignment</h4>
+<p>Alignment 是一个代码格式化插件，它可以使多行代码中的等号对齐，也可以调整多行代码为一个缩进级别，默认快捷键是 ctrl+alt+a（Mac OS 上是 cmd+ctrl+a）。跟QQ截图冲突了？自己改下吧，我改成了ctrl+shift+a。</p>
+<h4 id="colorpicker"><a class="header-anchor" href="#colorpicker">¶</a>ColorPicker</h4>
+<p>在编辑CSS样式的时候，要加个自己喜欢颜色或改改颜色啥的，要到PS里去调色？ColorPicker 可以让 Sublime Text 3内置一个调色盘，调好颜色，点击OK就会在光标处生成十六进制颜色代码。</p>
+<h4 id="csscomb"><a class="header-anchor" href="#csscomb">¶</a>CssComb</h4>
+<p>这是用来给CSS属性进行排序的格式化插件。如果你想保持的代码干净整洁，并且希望按一定的顺序排列（是不是有点强迫症了？），那么这个插件是一种有效解决的方案。特别是当你和其他有自己代码编写风格的开发者一同协作的时候。</p>
+<h4 id="converttoutf8"><a class="header-anchor" href="#converttoutf8">¶</a>ConvertToUTF8</h4>
+<p>Sublime原生不支持GBK等编码，打开这类编码文件时中文或一些字符都乱码了，安装该插件即可解决</p>
+<h4 id="html5-htmlattributes"><a class="header-anchor" href="#html5-htmlattributes">¶</a>HTML5&amp;HTMLattributes</h4>
+<p>这两个插件对弥补了sublime对html5支持度不足的缺陷</p>
+<h4 id="jquery"><a class="header-anchor" href="#jquery">¶</a>Jquery</h4>
+<p>顾名思义，包含jquery函数</p>
+<h4 id="codeformatter"><a class="header-anchor" href="#codeformatter">¶</a>CodeFormatter</h4>
+<p>可以对html、JS、CSS、PHP、python代码格式化的插件</p>
 <p>默认快捷键ctrl+alt+F，如果想对PHP格式化，需要到该插件默认设置中设定php.exe的路径</p>
-<h4 id="BracketHighLighter"><a href="#BracketHighLighter" class="headerlink" title="BracketHighLighter"></a>BracketHighLighter</h4><p>括号、标记高亮等等，挺好用的，只是偶尔识别错误</p>
-<h4 id="DocBlockr"><a href="#DocBlockr" class="headerlink" title="DocBlockr"></a>DocBlockr</h4><p>DocBlockr 可以使你很方便地对代码建立文档。它会解析函数，变量，和参数，根据它们自动生成文档范式，你的工作就是去填充对应的说明。</p>
-<h4 id="JsFormat"><a href="#JsFormat" class="headerlink" title="JsFormat"></a>JsFormat</h4><p>一个JS代码格式化插件。</p>
-<h4 id="MarkdownEditing"><a href="#MarkdownEditing" class="headerlink" title="MarkdownEditing"></a>MarkdownEditing</h4><p>此篇博客用到了该插件</p>
-<h4 id="OmniMarkupPreviewer"><a href="#OmniMarkupPreviewer" class="headerlink" title="OmniMarkupPreviewer"></a>OmniMarkupPreviewer</h4><p>用来预览markdown的插件，相同功能的有Markdown Preview</p>
+<h4 id="brackethighlighter"><a class="header-anchor" href="#brackethighlighter">¶</a>BracketHighLighter</h4>
+<p>括号、标记高亮等等，挺好用的，只是偶尔识别错误</p>
+<h4 id="docblockr"><a class="header-anchor" href="#docblockr">¶</a>DocBlockr</h4>
+<p>DocBlockr 可以使你很方便地对代码建立文档。它会解析函数，变量，和参数，根据它们自动生成文档范式，你的工作就是去填充对应的说明。</p>
+<h4 id="jsformat"><a class="header-anchor" href="#jsformat">¶</a>JsFormat</h4>
+<p>一个JS代码格式化插件。</p>
+<h4 id="markdownediting"><a class="header-anchor" href="#markdownediting">¶</a>MarkdownEditing</h4>
+<p>此篇博客用到了该插件</p>
+<h4 id="omnimarkuppreviewer"><a class="header-anchor" href="#omnimarkuppreviewer">¶</a>OmniMarkupPreviewer</h4>
+<p>用来预览markdown的插件，相同功能的有Markdown Preview</p>
 
       
     </div>
@@ -755,6 +786,13 @@
           
 
           
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
 
           
 
@@ -794,6 +832,17 @@
                   <a href="http://weibo.com/p/1005052719131961/home?is_all=1" title="Weibo &rarr; http://weibo.com/p/1005052719131961/home?is_all=1" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
                 </span>
               
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="/atom.xml" title="rss fa &rarr; /atom.xml"><i class="fa fa-fw fa-globe"></i>rss fa</a>
+                </span>
+              
             </div>
           
 
@@ -821,7 +870,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装"><span class="nav-number">1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#插件"><span class="nav-number">2.</span> <span class="nav-text">插件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Package-Control"><span class="nav-number">2.1.</span> <span class="nav-text">Package Control</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#简单的安装方法："><span class="nav-number">2.1.1.</span> <span class="nav-text">简单的安装方法：</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Emmet"><span class="nav-number">2.2.</span> <span class="nav-text">Emmet</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Soda-Theme"><span class="nav-number">2.3.</span> <span class="nav-text">Soda Theme</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#SublimeLinter"><span class="nav-number">2.4.</span> <span class="nav-text">SublimeLinter</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Sublime​Code​Intel"><span class="nav-number">2.5.</span> <span class="nav-text">Sublime​Code​Intel</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Alignment"><span class="nav-number">2.6.</span> <span class="nav-text">Alignment</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ColorPicker"><span class="nav-number">2.7.</span> <span class="nav-text">ColorPicker</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CssComb"><span class="nav-number">2.8.</span> <span class="nav-text">CssComb</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ConvertToUTF8"><span class="nav-number">2.9.</span> <span class="nav-text">ConvertToUTF8</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#HTML5-amp-HTMLattributes"><span class="nav-number">2.10.</span> <span class="nav-text">HTML5&amp;HTMLattributes</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Jquery"><span class="nav-number">2.11.</span> <span class="nav-text">Jquery</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CodeFormatter"><span class="nav-number">2.12.</span> <span class="nav-text">CodeFormatter</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#BracketHighLighter"><span class="nav-number">2.13.</span> <span class="nav-text">BracketHighLighter</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#DocBlockr"><span class="nav-number">2.14.</span> <span class="nav-text">DocBlockr</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JsFormat"><span class="nav-number">2.15.</span> <span class="nav-text">JsFormat</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#MarkdownEditing"><span class="nav-number">2.16.</span> <span class="nav-text">MarkdownEditing</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#OmniMarkupPreviewer"><span class="nav-number">2.17.</span> <span class="nav-text">OmniMarkupPreviewer</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装"><span class="nav-number">1.</span> <span class="nav-text">¶安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#插件"><span class="nav-number">2.</span> <span class="nav-text">¶插件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#package-control"><span class="nav-number">2.1.</span> <span class="nav-text">¶Package Control</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#简单的安装方法："><span class="nav-number">2.1.1.</span> <span class="nav-text">¶简单的安装方法：</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#emmet"><span class="nav-number">2.2.</span> <span class="nav-text">¶Emmet</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#soda-theme"><span class="nav-number">2.3.</span> <span class="nav-text">¶Soda Theme</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#sublimelinter"><span class="nav-number">2.4.</span> <span class="nav-text">¶SublimeLinter</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#sublime-code-intel"><span class="nav-number">2.5.</span> <span class="nav-text">¶Sublime​Code​Intel</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#alignment"><span class="nav-number">2.6.</span> <span class="nav-text">¶Alignment</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#colorpicker"><span class="nav-number">2.7.</span> <span class="nav-text">¶ColorPicker</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#csscomb"><span class="nav-number">2.8.</span> <span class="nav-text">¶CssComb</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#converttoutf8"><span class="nav-number">2.9.</span> <span class="nav-text">¶ConvertToUTF8</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#html5-htmlattributes"><span class="nav-number">2.10.</span> <span class="nav-text">¶HTML5&amp;HTMLattributes</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#jquery"><span class="nav-number">2.11.</span> <span class="nav-text">¶Jquery</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#codeformatter"><span class="nav-number">2.12.</span> <span class="nav-text">¶CodeFormatter</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#brackethighlighter"><span class="nav-number">2.13.</span> <span class="nav-text">¶BracketHighLighter</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#docblockr"><span class="nav-number">2.14.</span> <span class="nav-text">¶DocBlockr</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#jsformat"><span class="nav-number">2.15.</span> <span class="nav-text">¶JsFormat</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#markdownediting"><span class="nav-number">2.16.</span> <span class="nav-text">¶MarkdownEditing</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#omnimarkuppreviewer"><span class="nav-number">2.17.</span> <span class="nav-text">¶OmniMarkupPreviewer</span></a></li></ol></li></ol></div>
             
 
           </div>
