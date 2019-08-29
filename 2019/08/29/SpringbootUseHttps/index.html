@@ -96,18 +96,18 @@
 
 
 
-  <meta name="description" content="最近在做一个项目,首先是因为要在普通静态类里面调用Service,因为Service是Dubbo提供者的类,只能通过注解来调用.">
-<meta name="keywords" content="JAVA">
+  <meta name="description" content="很多场景都要求使用https了，但是一般开发都是http环境，改造https有很多方法，这里介绍一种最好用的也是实际生产最多见的一种方式。">
+<meta name="keywords" content="nginx,https,springboot">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Spring自定义扫描注解">
-<meta property="og:url" content="http://zhangmrit.github.io/2016/08/23/SpringCustomScanAnnotation/index.html">
+<meta property="og:title" content="springboot部署https">
+<meta property="og:url" content="http://zhangmrit.github.io/2019/08/29/SpringbootUseHttps/index.html">
 <meta property="og:site_name" content="Alive">
-<meta property="og:description" content="最近在做一个项目,首先是因为要在普通静态类里面调用Service,因为Service是Dubbo提供者的类,只能通过注解来调用.">
+<meta property="og:description" content="很多场景都要求使用https了，但是一般开发都是http环境，改造https有很多方法，这里介绍一种最好用的也是实际生产最多见的一种方式。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-02T10:54:51.074Z">
+<meta property="og:updated_time" content="2019-08-29T02:32:00.243Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Spring自定义扫描注解">
-<meta name="twitter:description" content="最近在做一个项目,首先是因为要在普通静态类里面调用Service,因为Service是Dubbo提供者的类,只能通过注解来调用.">
+<meta name="twitter:title" content="springboot部署https">
+<meta name="twitter:description" content="很多场景都要求使用https了，但是一般开发都是http环境，改造https有很多方法，这里介绍一种最好用的也是实际生产最多见的一种方式。">
 
 
 
@@ -117,7 +117,7 @@
 
   
   
-  <link rel="canonical" href="http://zhangmrit.github.io/2016/08/23/SpringCustomScanAnnotation/">
+  <link rel="canonical" href="http://zhangmrit.github.io/2019/08/29/SpringbootUseHttps/">
 
 
 
@@ -127,7 +127,7 @@
   };
 </script>
 
-  <title>Spring自定义扫描注解 | Alive</title>
+  <title>springboot部署https | Alive</title>
   
 
 
@@ -403,7 +403,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://zhangmrit.github.io/2016/08/23/SpringCustomScanAnnotation/">
+    <link itemprop="mainEntityOfPage" href="http://zhangmrit.github.io/2019/08/29/SpringbootUseHttps/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="wind">
@@ -420,7 +420,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Spring自定义扫描注解
+          <h1 class="post-title" itemprop="name headline">springboot部署https
 
               
             
@@ -446,24 +446,12 @@
                 
               
 
-              <time title="创建时间：2016-08-23 15:24:39" itemprop="dateCreated datePublished" datetime="2016-08-23T15:24:39+08:00">2016-08-23</time>
+              <time title="创建时间：2019-08-29 10:18:57 / 修改时间：10:32:00" itemprop="dateCreated datePublished" datetime="2019-08-29T10:18:57+08:00">2019-08-29</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-04-02 18:54:51" itemprop="dateModified" datetime="2019-04-02T18:54:51+08:00">2019-04-02</time>
               
             
           </span>
@@ -499,8 +487,8 @@
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/2016/08/23/SpringCustomScanAnnotation/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2016/08/23/SpringCustomScanAnnotation/" itemprop="commentCount"></span>
+                <a href="/2019/08/29/SpringbootUseHttps/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/08/29/SpringbootUseHttps/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -508,7 +496,7 @@
 
           
           
-            <span id="/2016/08/23/SpringCustomScanAnnotation/" class="leancloud_visitors" data-flag-title="Spring自定义扫描注解">
+            <span id="/2019/08/29/SpringbootUseHttps/" class="leancloud_visitors" data-flag-title="springboot部署https">
               <span class="post-meta-divider">|</span>
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
@@ -539,74 +527,16 @@
       
 
       
-        <p>最近在做一个项目,首先是因为要在普通静态类里面调用Service,因为Service是Dubbo提供者的类,只能通过注解来调用.</p>
+        <p>很多场景都要求使用<code>https</code>了，但是一般开发都是<code>http</code>环境，改造<code>https</code>有很多方法，这里介绍一种最好用的也是实际生产最多见的一种方式。</p>
 <a id="more"></a>
-<p>那么问题来了,该怎么调用Service呢?</p>
-<h3 id="静态类调用service"><a class="header-anchor" href="#静态类调用service">¶</a>静态类调用Service</h3>
-<p>一般需要在一个工具类中使用@Autowired 注解注入一个service。但是由于工具类方法一般都写成static，所以直接注入就存在问题。可以这样解决:</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Component</span>  </span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestUtils</span> </span>&#123;  </span><br><span class="line">  </span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Logger logger = LoggerFactory.getLogger(OpeLogUtils.class);  </span><br><span class="line">  </span><br><span class="line">    <span class="meta">@Autowired</span>  </span><br><span class="line">    <span class="keyword">private</span> TestService testService;  </span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> TestUtils testUtils ;  </span><br><span class="line">  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setUserInfo</span><span class="params">(TestUtils testUtils )</span> </span>&#123;  </span><br><span class="line">        <span class="keyword">this</span>.testUtils = testUtils ;  </span><br><span class="line">    &#125;  </span><br><span class="line">      </span><br><span class="line">    <span class="meta">@PostConstruct</span>  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">init</span><span class="params">()</span> </span>&#123;  </span><br><span class="line">        testUtils = <span class="keyword">this</span>;  </span><br><span class="line">        testUtils.testService= <span class="keyword">this</span>.testService;  </span><br><span class="line">    &#125;  </span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-<p>@PostConstruct  是spring标签,相当于在配置文件声明注入</p>
-<h3 id="如何让spring扫描该静态类"><a class="header-anchor" href="#如何让spring扫描该静态类">¶</a>如何让Spring扫描该静态类</h3>
-<p>这样通过<code>testUtils.testService</code>调用即可.那么问题来,这样做了以后你会发现spring依旧不加载testService,声明没有执行,<br>
-这里别忘记在上面的代码中声明一个Spring注解,如<code>@Component</code>可能有的同学到这一步是成功,因为你可能是默认配置,默认配置是扫描base-package下所有的注解,这样性能肯定不好,勤学苦练,苦思冥想,终于让我找到配置起来比较高逼格的做法,话不多说,上代码:</p>
-<figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;!<span class="comment">--  自动扫描，完成bean的创建和依赖注入 --&gt;</span></span><br><span class="line">	&lt;<span class="keyword">context</span>:<span class="keyword">component</span>-scan base-<span class="keyword">package</span>=<span class="string">"com.example"</span> <span class="keyword">use</span>-<span class="keyword">default</span>-filters=<span class="string">"false"</span>&gt;</span><br><span class="line">		&lt;<span class="keyword">context</span>:include-filter <span class="keyword">type</span>=<span class="string">"annotation"</span> expression=<span class="string">"org.springframework.stereotype.Controller"</span> /&gt;</span><br><span class="line">		&lt;<span class="keyword">context</span>:include-filter <span class="keyword">type</span>=<span class="string">"annotation"</span> expression=<span class="string">"org.springframework.stereotype.Component"</span> /&gt;</span><br><span class="line">	&lt;<span class="keyword">context</span>:exclude-filter <span class="keyword">type</span>=<span class="string">"annotation"</span> expression=<span class="string">"org.springframework.stereotype.Service"</span> /&gt; 	</span><br><span class="line">		&lt;<span class="keyword">context</span>:exclude-filter <span class="keyword">type</span>=<span class="string">"regex"</span> expression=<span class="string">"com.example.controller"</span>/&gt;</span><br><span class="line">		&lt;<span class="keyword">context</span>:exclude-filter <span class="keyword">type</span>=<span class="string">"regex"</span> expression=<span class="string">"com.example.service"</span>/&gt;</span><br><span class="line">	&lt;/<span class="keyword">context</span>:<span class="keyword">component</span>-scan&gt;</span><br></pre></td></tr></table></figure>
-<p>稍微解释下,在xml配置了<code>&lt;context:component-scan&gt;</code>这个标签后，spring可以自动去扫描base-pack下面或者子包下面的java文件，如果扫描到有<code>@Component @Controller@Service</code>等这些注解的类，则把这些类注册为bean<br>
-注意：如果配置了<code>&lt;context:component-scan&gt;</code>那么<code>&lt;context:annotation-config/&gt;</code>标签就可以不用再xml中配置了，因为前者包含了后者。另外<code>&lt;context:annotation-config/&gt;</code>还提供了两个子标签 <code>&lt;context:include-filter&gt;</code> 和<code>&lt;context:exclude-filter&gt;</code>在说明这两个子标签前，先说一下<code>&lt;context:component-scan&gt;</code>有一个use-default-filters属性，改属性默认为true,这就意味着会扫描指定包下的全部的标有<code>@Component</code>的类，并注册成bean.也就是<code>@Component</code>的子注解<code>@Service,@Reposity</code>等。所以如果仅仅是在配置文件中这么写</p>
-<figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="keyword">context</span>:<span class="keyword">component</span>-scan base-<span class="keyword">package</span>=<span class="string">"com.example"</span>/&gt;</span><br></pre></td></tr></table></figure>
-<p><code>use-default-filter</code>此时为true那么会对base-package包或者子包下的所有的进行java类进行扫描,并把匹配的java类注册成bean。</p>
-<p>可以发现这种扫描的粒度有点太大，如果你只想扫描指定包下面的Controller，该怎么办？此时子标签<code>&lt;context:incluce-filter&gt;</code>就起到了勇武之地。如下所示</p>
-<figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="keyword">context</span>:<span class="keyword">component</span>-scan base-<span class="keyword">package</span>=<span class="string">"com.example.controller"</span>&gt;  </span><br><span class="line">	&lt;<span class="keyword">context</span>:include-filter <span class="keyword">type</span>=<span class="string">"annotation"</span> expression=<span class="string">"org.springframework.stereotype.Controller"</span>/&gt;   </span><br><span class="line">&lt;/<span class="keyword">context</span>:<span class="keyword">component</span>-scan&gt;</span><br></pre></td></tr></table></figure>
-<p>这样就会只扫描base-package指定下的有<code>@Controller</code>下的java类，并注册成bean<br>
-但是因为<code>use-dafault-filte</code>r在上面并没有指定，默认就为true，所以当把上面的配置改成如下所示的时候，就会产生与你期望相悖的结果（注意base-package包值得变化）</p>
-<figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="keyword">context</span>:<span class="keyword">component</span>-scan base-<span class="keyword">package</span>=<span class="string">"com.example.controller"</span>&gt;  </span><br><span class="line">	&lt;<span class="keyword">context</span>:include-filter <span class="keyword">type</span>=<span class="string">"annotation"</span> expression=<span class="string">"org.springframework.stereotype.Controller"</span>/&gt;   </span><br><span class="line">&lt;/<span class="keyword">context</span>:<span class="keyword">component</span>-scan&gt;</span><br></pre></td></tr></table></figure>
-<p>此时，spring不仅扫描了<code>@Controller</code>，还扫描了指定包所在的子包service包下注解<code>@Service</code>的java类<br>
-此时指定的include-filter没有起到作用，只要把use-default-filter设置成false就可以了。这样就可以避免在base-packeage配置多个包名这种不是很优雅的方法来解决这个问题了。<br>
-另外在我参与的项目中可以发现在base-package指定的包中有的子包是不含有注解了，所以不用扫描，此时可以指定<code>&lt;context:exclude-filter&gt;</code>来进行过滤，说明此包不需要被扫描。综合以上说明<br>
-Use-dafault-filters=”false”的情况下：<code>&lt;context:exclude-filter&gt;</code>指定的不扫描，<code>&lt;context:include-filter&gt;</code>指定的扫描这个配置文件中必须声明xmlns:context 这个xml命名空间，在schemaLocation中需要指定schema：</p>
-<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">http:</span>//www.springframework<span class="meta">.org</span>/schema/context</span><br><span class="line"><span class="symbol">http:</span>//www.springframework<span class="meta">.org</span>/schema/context/spring-context<span class="number">-3.0</span>.xsd</span><br></pre></td></tr></table></figure>
-<p>这个文件中beans根节点下只有一个context:component-scan节点，此节点有两个属性base-package属性告诉spring要扫描的包，use-default-filters=&quot;false&quot;表示不要使用默认的过滤器，此处的默认过滤器，会扫描包含Service,Component,Repository,Controller注解修饰的类，而此处我们处于示例的目的，故意将use-default-filters属性设置成了false。</p>
-<p>context:component-scan节点允许有两个子节点<code>&lt;context:include-filter&gt;</code>和<code>&lt;context:exclude-filter&gt;</code>。filter标签的type和表达式说明如下：</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">Filter Type</th>
-<th style="text-align:right">Examples Expression</th>
-<th style="text-align:center">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">annotation</td>
-<td style="text-align:right">org.example.SomeAnnotation</td>
-<td style="text-align:center">符合SomeAnnoation的target class</td>
-</tr>
-<tr>
-<td style="text-align:left">assignable</td>
-<td style="text-align:right">org.example.SomeClass</td>
-<td style="text-align:center">指定class或interface的全名</td>
-</tr>
-<tr>
-<td style="text-align:left">aspectj</td>
-<td style="text-align:right">org.example…*Service+</td>
-<td style="text-align:center">AspectJ语法</td>
-</tr>
-<tr>
-<td style="text-align:left">regex</td>
-<td style="text-align:right">org.example.Default.*</td>
-<td style="text-align:center">Regelar Expression</td>
-</tr>
-<tr>
-<td style="text-align:left">custom</td>
-<td style="text-align:right">org.example.MyTypeFilter</td>
-<td style="text-align:center">Spring3新增自定Type，org.springframework.core.type.TypeFilter</td>
-</tr>
-</tbody>
-</table>
-<p>在我们的示例中，将filter的type设置成了正则表达式，regex，注意在正则里面.表示所有字符，而.才表示真正的.字符。我们的正则表示以Dao或者Service结束的类。</p>
-<p>我们也可以使用annotaion来限定，如下：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span><span class="tag">&lt;<span class="name">beans</span> <span class="attr">xmlns</span>=<span class="string">"http://www.springframework.org/schema/beans"</span><span class="attr">xmlns:xsi</span>=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span><span class="attr">xmlns:context</span>=<span class="string">"http://www.springframework.org/schema/context"</span><span class="attr">xsi:schemaLocation</span>=<span class="string">"http://www.springframework.org/schema/beans</span></span></span><br><span class="line"><span class="tag"><span class="string">           http://www.springframework.org/schema/beans/spring-beans.xsd</span></span></span><br><span class="line"><span class="tag"><span class="string">           http://www.springframework.org/schema/context</span></span></span><br><span class="line"><span class="tag"><span class="string">           http://www.springframework.org/schema/context/spring-context-3.0.xsd"</span>&gt;</span><span class="tag">&lt;<span class="name">context:component-scan</span> <span class="attr">base-package</span>=<span class="string">"cn.outofmemory.spring"</span> <span class="attr">use-default-filters</span>=<span class="string">"false"</span>&gt;</span><span class="tag">&lt;<span class="name">context:include-filter</span> <span class="attr">type</span>=<span class="string">"annotation"</span> <span class="attr">expression</span>=<span class="string">"org.springframework.stereotype.Repository"</span>/&gt;</span><span class="tag">&lt;<span class="name">context:include-filter</span> <span class="attr">type</span>=<span class="string">"annotation"</span> <span class="attr">expression</span>=<span class="string">"org.springframework.stereotype.Service"</span>/&gt;</span><span class="tag">&lt;/<span class="name">context:component-scan</span>&gt;</span><span class="tag">&lt;/<span class="name">beans</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>这里我们指定的include-filter的type是annotation，expression则是注解类的全名。</p>
-<p>另外context:conponent-scan节点还有<code>&lt;context:exclude-filter&gt;</code>可以用来指定要排除的类，其用法和include-filter一致。</p>
+<h3 id="下载ssl证书"><a class="header-anchor" href="#下载ssl证书">¶</a>下载ssl证书</h3>
+<p>你需要申请一个<code>ssl</code>证书，证书有很多种，学习的情况下，去阿里云买个免费的就行了，下载适合<code>nginx</code>使用的证书，会得到一个压缩包，里面有2个证书</p>
+<h3 id="配置nginx"><a class="header-anchor" href="#配置nginx">¶</a>配置nginx</h3>
+<p>得到证书后上传到服务器，放到你想放的位置，在<code>nginx</code>添加相关配置</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#Tomcat 8080端口</span></span><br><span class="line"><span class="attribute">upstream</span> tomcat_8088&#123;</span><br><span class="line">	<span class="attribute">server</span>    <span class="number">127.0.0.1:8088</span>  weight=<span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line">	</span><br><span class="line"><span class="comment">#将所有http协议内容重定向到https协议</span></span><br><span class="line"><span class="section">server</span> &#123;</span><br><span class="line">	<span class="attribute">listen</span> <span class="number">80</span>;</span><br><span class="line">	<span class="attribute">server_name</span> xxx.com;<span class="comment">#你的域名</span></span><br><span class="line">	<span class="attribute">rewrite</span><span class="regexp"> ^</span> https://<span class="variable">$server_name</span><span class="variable">$request_uri</span>? <span class="literal">permanent</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">#https协议</span></span><br><span class="line"><span class="section">server</span> &#123;</span><br><span class="line">	<span class="attribute">listen</span> <span class="number">443</span>;</span><br><span class="line">	<span class="attribute">server_name</span> xxx.com;<span class="comment">#你的域名</span></span><br><span class="line">	</span><br><span class="line">	<span class="comment"># letsencrypt生成的文件</span></span><br><span class="line">	<span class="attribute">ssl</span> <span class="literal">on</span>;</span><br><span class="line">	<span class="attribute">ssl_certificate</span> /usr/local/nginx/cert/xxx.pem;<span class="comment">#你的证书</span></span><br><span class="line">	<span class="attribute">ssl_certificate_key</span> /usr/local/nginx/cert/xxx.key;<span class="comment">#你的证书</span></span><br><span class="line"></span><br><span class="line">	<span class="attribute">ssl_session_timeout</span> <span class="number">1d</span>;</span><br><span class="line">	<span class="attribute">ssl_session_cache</span> shared:SSL:<span class="number">50m</span>;</span><br><span class="line">	<span class="attribute">ssl_session_tickets</span> <span class="literal">on</span>;</span><br><span class="line"></span><br><span class="line">	<span class="attribute">ssl_protocols</span> TLSv1 TLSv1.<span class="number">1</span> TLSv1.<span class="number">2</span>;</span><br><span class="line">	<span class="comment"># 一般推荐使用的ssl_ciphers值: https://wiki.mozilla.org/Security/Server_Side_TLS</span></span><br><span class="line">	<span class="attribute">ssl_ciphers</span> <span class="string">'ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES256-GCM-SHA384:DHE-RSA-AES128-GCM-SHA256:DHE-DSS-AES128-GCM-SHA256:kEDH+AESGCM:ECDHE-RSA-AES128-SHA256:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA:ECDHE-ECDSA-AES256-SHA:DHE-RSA-AES128-SHA256:DHE-RSA-AES128-SHA:DHE-DSS-AES128-SHA256:DHE-RSA-AES256-SHA256:DHE-DSS-AES256-SHA:DHE-RSA-AES256-SHA:AES128-GCM-SHA256:AES256-GCM-SHA384:AES128:AES256:AES:DES-CBC3-SHA:HIGH:!aNULL:!eNULL:!EXPORT:!DES:!RC4:!MD5:!PSK'</span>;</span><br><span class="line">	<span class="attribute">ssl_prefer_server_ciphers</span> <span class="literal">on</span>;</span><br><span class="line">	</span><br><span class="line">	<span class="comment"># 代理tomcat</span></span><br><span class="line">	<span class="attribute">location</span> / &#123;   </span><br><span class="line">		<span class="attribute">proxy_set_header</span>	Host				<span class="variable">$http_host</span>;  			</span><br><span class="line">		<span class="attribute">proxy_set_header</span>	X-Real-IP			<span class="variable">$remote_addr</span>;     </span><br><span class="line">		<span class="attribute">proxy_set_header</span>	X-Forwarded-For		<span class="variable">$proxy_add_x_forwarded_for</span>;     </span><br><span class="line">		<span class="attribute">proxy_set_header</span>	Cookie				<span class="variable">$http_cookie</span>;</span><br><span class="line">		<span class="attribute">proxy_pass</span>		    http://tomcat_8088;</span><br><span class="line">		<span class="comment">#proxy_redirect		default;</span></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="修改springboot相关配置"><a class="header-anchor" href="#修改springboot相关配置">¶</a>修改springboot相关配置</h3>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">server:</span></span><br><span class="line">    <span class="comment"># 下面2项配置结合nginx防止重定向到http,若无https需求可移除</span></span><br><span class="line"><span class="attr">    use-forward-headers:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">    tomcat:</span></span><br><span class="line"><span class="attr">        protocol-header:</span> <span class="string">X-Forwarded-Proto</span></span><br></pre></td></tr></table></figure>
+<p>是不是很简单的，但是网上的教程一般都很笼统或者根本就不全</p>
 
       
     </div>
@@ -630,7 +560,11 @@ Use-dafault-filters=”false”的情况下：<code>&lt;context:exclude-filter&g
       
         <div class="post-tags">
           
-            <a href="/tags/JAVA/" rel="tag"># JAVA</a>
+            <a href="/tags/nginx/" rel="tag"># nginx</a>
+          
+            <a href="/tags/https/" rel="tag"># https</a>
+          
+            <a href="/tags/springboot/" rel="tag"># springboot</a>
           
         </div>
       
@@ -643,8 +577,8 @@ Use-dafault-filters=”false”的情况下：<code>&lt;context:exclude-filter&g
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/06/15/UseMarkdownToWriteAPI/" rel="next" title="用markdown来写api">
-                <i class="fa fa-chevron-left"></i> 用markdown来写api
+              <a href="/2019/08/01/centos7fdfsnginx/" rel="next" title="centos7安装fastdfs并整合nginx">
+                <i class="fa fa-chevron-left"></i> centos7安装fastdfs并整合nginx
               </a>
             
           </div>
@@ -652,10 +586,6 @@ Use-dafault-filters=”false”的情况下：<code>&lt;context:exclude-filter&g
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/10/11/2016NewAlipayPaymentBug/" rel="prev" title="2016新版支付宝APP支付的坑">
-                2016新版支付宝APP支付的坑 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -878,7 +808,7 @@ Use-dafault-filters=”false”的情况下：<code>&lt;context:exclude-filter&g
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#静态类调用service"><span class="nav-number">1.</span> <span class="nav-text">¶静态类调用Service</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何让spring扫描该静态类"><span class="nav-number">2.</span> <span class="nav-text">¶如何让Spring扫描该静态类</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#下载ssl证书"><span class="nav-number">1.</span> <span class="nav-text">¶下载ssl证书</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置nginx"><span class="nav-number">2.</span> <span class="nav-text">¶配置nginx</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改springboot相关配置"><span class="nav-number">3.</span> <span class="nav-text">¶修改springboot相关配置</span></a></li></ol></div>
             
 
           </div>

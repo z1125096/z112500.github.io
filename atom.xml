@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhangmrit.github.io/"/>
-  <updated>2019-08-01T05:09:27.011Z</updated>
+  <updated>2019-08-29T02:32:00.243Z</updated>
   <id>http://zhangmrit.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>springboot部署https</title>
+    <link href="http://zhangmrit.github.io/2019/08/29/SpringbootUseHttps/"/>
+    <id>http://zhangmrit.github.io/2019/08/29/SpringbootUseHttps/</id>
+    <published>2019-08-29T02:18:57.000Z</published>
+    <updated>2019-08-29T02:32:00.243Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;很多场景都要求使用&lt;code&gt;https&lt;/code&gt;了，但是一般开发都是&lt;code&gt;http&lt;/code&gt;环境，改造&lt;code&gt;https&lt;/code&gt;有很多方法，这里介绍一种最好用的也是实际生产最多见的一种方式。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="spring" scheme="http://zhangmrit.github.io/categories/spring/"/>
+    
+    
+      <category term="nginx" scheme="http://zhangmrit.github.io/tags/nginx/"/>
+    
+      <category term="https" scheme="http://zhangmrit.github.io/tags/https/"/>
+    
+      <category term="springboot" scheme="http://zhangmrit.github.io/tags/springboot/"/>
+    
+  </entry>
   
   <entry>
     <title>centos7安装fastdfs并整合nginx</title>
@@ -32,9 +56,9 @@
       <category term="工具" scheme="http://zhangmrit.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
     
     
-      <category term="FastDFS" scheme="http://zhangmrit.github.io/tags/FastDFS/"/>
-    
       <category term="nginx" scheme="http://zhangmrit.github.io/tags/nginx/"/>
+    
+      <category term="FastDFS" scheme="http://zhangmrit.github.io/tags/FastDFS/"/>
     
       <category term="centos7" scheme="http://zhangmrit.github.io/tags/centos7/"/>
     
